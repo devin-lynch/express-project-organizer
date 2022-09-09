@@ -1,0 +1,32 @@
+sequelize mode:create --name
+
+
+1. create a category model
+
+
+sequelize model:create --name category --attributes name:string
+
+
+
+
+categoriesProjects
+-------------------
+
+categoryId: INT
+projectId: INT
+
+sequelize model:create --name categoriesProjects --attributes categoryId:integer,projectId:integer
+
+
+
+3. integrate app
+
+
+GET/projects/new -- this new field should accept a new category name
+
+POST/projects -- route to add the category to the project being created
+
+
+GET /categories -- show all categories
+
+GET /categories/:id -- show a specific category and all projects with that category
